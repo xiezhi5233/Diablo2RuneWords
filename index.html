@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        标签页标题
+    </title>
+    <link href="css/clear.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="wrapper" ng-controller="ctrHome">
+    <nav>
+        <ul>
+            <li ng-repeat="nav in data.mainClass" ng-click="btn(nav)">{{nav}}</li>
+            <div><input type="search" ng-model="sh"></div>
+        </ul>
+        <ul>
+            <li ng-repeat="nav in data.mainClass2"  ng-click="btn(nav)">{{nav}}</li>
+        </ul>
+    </nav>
+    <div class="mainBox">
+        <div class="aBox" ng-repeat="a in data.menu|filter:sh|filter:sh2"
+             title="{{a.cName[0]}} ({{a.num}})&#10;需要符文: {{a.id}}&#10;建议职业: {{a.pro[0]}}">
+            <ul>
+                <li><h4>{{a.cName[0]}} ( {{a.eName}} )</h4></li>
+                <li>类型:<span  ng-repeat="c in a.class">{{c}}</span></li>
+                <li>( <b ng-repeat="i in a.id">{{i}} + </b>[{{a.id.length}}]孔装备 )</li>
+            </ul>
+            <ol>
+                <h2>固定属性:</h2>
+                <li ng-repeat="ar in a.arr">{{ar}}</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<script src="js/index.js">
+</script>
+</body>
+</html>

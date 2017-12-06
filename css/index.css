@@ -1,0 +1,79 @@
+@charset "utf-8";
+nav{
+    padding: 10px 30px;
+    background: #cccccc;
+}
+nav ul:after{
+    clear:both;
+    content:"";
+    display: block;
+}
+nav ul li{
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+    font:20px 微软雅黑;
+    text-align: center;
+    padding: 5px 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    border-radius:5px;
+    transition:background-color .3s;
+}
+nav ul li:hover{
+    background: #555;
+    color: #9a8567;
+    text-shadow:0 0 2px #696253;
+}
+.mainBox{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+.aBox{
+    padding: 20px;
+    background: rgba(0, 0, 0, .8);
+    border: 3px ridge #C4C4BE;
+    border-radius:10px;
+    color: #ffffFF;
+    font-size:16px;
+    text-shadow:0 0 2px #ffad00;
+    margin: 10px;
+}
+.aBox>ul>li>h4{
+    color: #9a8567;
+    text-shadow:0 0 2px #696253;
+    margin-bottom: 10px;
+}
+.aBox>ol li{
+    color: #5a70cc;
+    text-shadow:0 0 2px #234fc0;
+}
+.aBox span{
+    display: inline-block;
+    margin-right:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
